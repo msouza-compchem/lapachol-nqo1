@@ -1,0 +1,31 @@
+# ============================================================================
+# Stage 1b: single-point energy on the optimised geometry
+#   Level:  B3LYP-D4 / def2-TZVP with CPCM(water)
+#   Why:    a larger basis and implicit solvent give far better frontier
+#           orbital energies than the def2-SVP gas-phase optimisation.
+#   Input geometry: ligand_opt.xyz, extracted from the Stage 1a output.
+# ============================================================================
+
+! B3LYP D4 def2-TZVP def2/J RIJCOSX SP TightSCF
+! CPCM(water)
+
+%maxcore 1500
+%pal nprocs 4 end
+
+# Print the orbital energies we need, and write a Molden file for VMD/Multiwfn
+%output
+  Print[P_MOs] 1
+  Print[P_Basis] 2
+end
+
+%plots
+  Format Gaussian_Cube
+  dim1 80
+  dim2 80
+  dim3 80
+  # Replace NN with the HOMO index reported in the Stage 1a output
+  # MO("lapachol_homo.cube", NN, 0);
+  # MO("lapachol_lumo.cube", NN+1, 0);
+end
+
+* xyzfile 0 1 ligand_opt.xyz

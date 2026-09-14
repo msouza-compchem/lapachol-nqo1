@@ -1,0 +1,16 @@
+name: lapachol
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - mdanalysis
+  - openbabel
+  - rdkit
+  - vina            # AutoDock Vina python bindings
+  - meeko           # ligand/receptor preparation for Vina
+  - cclib           # parsing of ORCA output
+  - jupyterlab

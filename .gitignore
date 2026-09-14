@@ -1,0 +1,35 @@
+# --- trajectories and large binaries: NEVER commit these ---
+*.trr
+*.xtc
+*.edr
+*.cpt
+*.tpr
+*.log
+*.gro
+!03_md/reference/*.gro
+step*.pdb
+\#*\#
+
+# --- ORCA scratch ---
+*.tmp
+*.gbw
+*.densities
+*.cis
+*.bibtex
+*.property.txt
+*_atom*.inp
+*_atom*.out
+
+# --- docking scratch ---
+*.pdbqt
+!02_docking/receptor.pdbqt
+
+# --- python ---
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+
+# --- os ---
+.DS_Store
+Thumbs.db
