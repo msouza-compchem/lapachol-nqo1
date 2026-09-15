@@ -66,3 +66,12 @@ ensemble_energies.log
 *_trj.xyz
 *.property.txt
 02_sp_solvent.out
+
+# --- large ORCA artifacts: regenerate from the input files ---
+*.ges
+*.cpcm
+*.hess
+02_sp_solvent.out
+*.tga
+# cube files: regenerate with orca_plot from the .gbw
+*.cube
