@@ -33,3 +33,36 @@ __pycache__/
 # --- os ---
 .DS_Store
 Thumbs.db
+
+# --- CREST scratch: reproducible from ligand.xyz, do not version ---
+MDFILES/
+.history.xyz
+.cre_*.xyz
+.data
+cre_members
+coord
+coord.original
+scoord.*
+wbo
+gfnff_adjacency
+confcross.xyz
+crest.energies
+crest.restart
+crest_*.mdrestart
+crest_dynamics.trj
+crest_ensemble.xyz
+crest_rotamers*.xyz
+crest_conformers.xyz
+crest_input_copy.xyz
+crestopt.log
+ensemble_energies.log
+# keep crest_best.xyz: it is the DFT starting geometry
+
+# --- ORCA scratch ---
+*.engrad
+*.opt
+*.densitiesinfo
+*.hostnames
+*_trj.xyz
+*.property.txt
+02_sp_solvent.out

@@ -1,12 +1,8 @@
-# ============================================================================
-# Stage 1c: radical anion, for the ADIABATIC electron affinity
+# Stage 1c: radical anion, for the adiabatic electron affinity
 #   EA_ad = E(neutral, optimised) - E(anion, optimised)
-#   This is the descriptor that actually correlates with how easily NQO1 can
-#   reduce the quinone - far more meaningful than the bare LUMO energy.
-#   Charge = -1, multiplicity = 2 (one unpaired electron).
-# ============================================================================
+#   Charge = -1, multiplicity = 2 (one unpaired electron)
 
-! UB3LYP D4 def2-TZVP def2/J RIJCOSX Opt TightSCF
+! B3LYP D4 def2-TZVP def2/J RIJCOSX Opt TightSCF SlowConv
 ! CPCM(water)
 
 %maxcore 1500

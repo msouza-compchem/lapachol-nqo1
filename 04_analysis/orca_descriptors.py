@@ -114,9 +114,12 @@ def main() -> None:
     # --- adiabatic electron affinity
     ea = None
     if anion_out.exists():
-        e_neutral = parse_final_energy(sp_out)
-        e_anion = parse_final_energy(anion_out)
-        ea = (e_neutral - e_anion) * HARTREE_TO_EV
+        try:
+            e_neutral = parse_final_energy(sp_out)
+            e_anion = parse_final_energy(anion_out)
+            ea = (e_neutral - e_anion) * HARTREE_TO_EV
+        except ValueError:
+            print("\nAnion calculation not finished yet - EA will be reported later.")
 
     results = {
         "E_HOMO (eV)": e_homo,
