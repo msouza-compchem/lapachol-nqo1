@@ -75,3 +75,11 @@ ensemble_energies.log
 *.tga
 # cube files: regenerate with orca_plot from the .gbw
 *.cube
+
+# --- CHARMM-GUI intermediates: regenerable from the job, too large for git ---
+03_md/charmmgui/**/*.psf
+03_md/charmmgui/**/*.crd
+03_md/charmmgui/**/*.oldpsf
+03_md/charmmgui/**/step2*
+03_md/charmmgui/**/step3*
+03_md/charmmgui/**/water_tmp.crd
