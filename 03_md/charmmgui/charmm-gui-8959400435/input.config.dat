@@ -1,0 +1,1 @@
+{"systype":null,"dimensions":["142","142","142","90.0","90.0","90.0"],"input":["gromacs"],"forcefield":{"type":"c36m","files":["default"],"custom":["fad\/fad.rtf","fad\/fad.prm","lig\/lig.rtf","lig\/lig.prm"]},"hmr":false}
